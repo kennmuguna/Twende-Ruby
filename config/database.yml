@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: twende_development
+
+test:
+  adapter: postgresql
+  database: twende_test

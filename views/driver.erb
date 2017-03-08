@@ -7,8 +7,15 @@
 #Code to retreive driver's route, time of travel & passengers requesting to be carried
 
 
-<p>Contact details of passengers who share the same route and departure time as you will appear above 
+<p>Contact details of passengers who share the same route and departure time as you will appear above
 as an expression of interest to car pool with you</p>
 
 <p>You're encouraged to reach out to see if you'd be comfortable car-pooling with them<p>
 
+<% if @drivers.any?() %>
+  <ul>
+    <% @drivers.each() do |driver| %>
+      <li><a href="/index"><%= driver.name()%></a></li>
+    <% end %>
+  </ul>
+<% end %>
