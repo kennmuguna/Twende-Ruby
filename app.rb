@@ -18,20 +18,16 @@ get('/about') do
   erb(:about)
 end
 
-get("/driver_signin") do
-  erb(:driver_form)
-end
-
-get("/passenger_signin")  do
-  erb(:passenger_form)
-end
-
 get ("/driver") do
   @drivers = Driver.all()
   erb(:driver)
 end
 
-post("/driver_form")  do
+get("/driver_signin") do
+  erb(:driver_form)
+end
+
+post("/driver")  do
   name = params.fetch("name").capitalize!()
   email = params.fetch("email")
   phone_number = params.fetch("phone_number").to_i()
@@ -46,6 +42,22 @@ post("/driver_form")  do
   erb(:driver)
 end
 
+get('/routes') do
+  erb(:routes)
+end
+
 get("/passenger")  do
   erb(:passenger)
+end
+
+get("/passenger_signin")  do
+  erb(:passenger_form)
+end
+
+get('/terms_and_conditions') do
+  erb(:terms_and_conditions)
+end
+
+get('/payment') do
+  erb(:payment)
 end
