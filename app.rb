@@ -1,6 +1,6 @@
 require("sinatra")
-require("sinatra/reloader")
 require("sinatra/activerecord")
+require("sinatra/reloader")
 also_reload("lib/**/*.rb")
 require("./lib/passenger")
 require("./lib/driver")
@@ -26,7 +26,23 @@ get("/passenger_signin")  do
   erb(:passenger_form)
 end
 
-get("/driver")  do
+get ("/driver") do
+  @drivers = Driver.all()
+  erb(:driver)
+end
+
+post("/driver_form")  do
+  name = params.fetch("name").capitalize!()
+  email = params.fetch("email")
+  phone_number = params.fetch("phone_number").to_i()
+  car = params.fetch("car").capitalize!()
+  number_plate = params.fetch("number_plate")
+  space = params.fetch("space").to_i()
+  route_from = params.fetch("route_from").capitalize!()
+  route_to = params.fetch("route_to").capitalize!()
+  time = params.fetch("time")
+  driver = Driver.new({:name => name, :email => email, :phone_number => phone_number, :car => car, :number_plate => number_plate, :space => space, :route_from => route_from, :route_to => route_to, :time => time, :id => nil})
+  driver.save()
   erb(:driver)
 end
 

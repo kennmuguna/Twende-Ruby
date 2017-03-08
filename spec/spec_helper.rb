@@ -8,7 +8,11 @@ require("rspec")
 RSpec.configure do |config|
   config.after(:each) do
     Passenger.all().each()  do |passenger|
-      task.destroy()
+      passenger.destroy()
+    end
+    
+    Driver.all().each() do |driver|
+      driver.destroy()
     end
   end
 end
