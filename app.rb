@@ -18,8 +18,13 @@ get('/about') do
   erb(:about)
 end
 
+get("/passenger_signin/:id")  do
+  @driver = Driver.find(params.fetch("id").to_i())
+  erb(:passenger_form)
+end
+
 get ("/driver") do
-  @drivers = Driver.all()
+  @driver
   erb(:driver)
 end
 
@@ -34,21 +39,39 @@ post("/driver")  do
   car = params.fetch("car").capitalize!()
   number_plate = params.fetch("number_plate")
   space = params.fetch("space").to_i()
-  route_from = params.fetch("route_from").capitalize!()
-  route_to = params.fetch("route_to").capitalize!()
+  route_from = params.fetch("route_from")
+  route_to = params.fetch("route_to")
   time = params.fetch("time")
-  driver = Driver.new({:name => name, :email => email, :phone_number => phone_number, :car => car, :number_plate => number_plate, :space => space, :route_from => route_from, :route_to => route_to, :time => time, :id => nil})
-  driver.save()
-  erb(:driver)
+  @driver = Driver.new({:name => name, :email => email, :phone_number => phone_number, :car => car, :number_plate => number_plate, :space => space, :route_from => route_from, :route_to => route_to, :time => time, :id => nil})
+  if @driver.save()
+    erb(:driver)
+  else
+    erb(:errors1)
+  end
 end
 
-get('/routes') do
-  erb(:routes)
+post("/passenger")  do
+  name = params.fetch("name").capitalize!()
+  email = params.fetch("email")
+  phone_number =  params.fetch("phone_number").to_i()
+  driver_id = params.fetch("driver_id").to_i()
+  @driver = Driver.find(driver_id)
+  @passenger = Passenger.new({:name => name, :email => email, :phone_number => phone_number, :driver_id => driver_id})
+  if @passenger.save()
+    erb(:passenger)
+  else
+    erb(:errors)
+  end
 end
 
 get("/passenger")  do
+  @passenger
   erb(:passenger)
 end
+
+get("/routes") do
+  @drivers = Driver.all()
+  erb(:routes)
 
 get("/passenger_signin")  do
   erb(:passenger_form)
