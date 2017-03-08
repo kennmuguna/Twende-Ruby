@@ -1,4 +1,4 @@
-/*body {
+body {
     padding-top: 70px;
 }
 
@@ -122,4 +122,4 @@ input {
 #op:not(:checked)~.overlay-hugeinc nav ul {
     -webkit-transform: translateY(25%) rotateX(-35deg);
     transform: translateY(25%) rotateX(-35deg);
-}*/
+}
