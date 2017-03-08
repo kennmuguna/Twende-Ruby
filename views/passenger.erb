@@ -1,0 +1,12 @@
+<br> <center><h1>Account Setup Successful!</h1><center> <br>
+
+<h3>Congragulations <%= @passenger.name()%> on setting up your account</h3> <br>
+
+<p>Here is a list of the routes that are currently available for you to car-pool:</p>
+
+<ul>
+ <li><%= @driver.name()%> will be travelling from <%= @driver.route_from()%> to <%= @driver.route_to()%> Car owner's contact: <%= @driver.phone_number() %></li>
+</ul>
+
+<p>If one of the above routes happen to be used at a time of your convenience, you're welcome to contact the
+ driver whose phone number will appear beside the routes</p> <br>

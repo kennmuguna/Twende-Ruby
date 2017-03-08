@@ -1,0 +1,15 @@
+<h1>Routes in Use</h1>
+
+<h2>Here is a list of the routes in use by our currently registered car owners:</h2>
+
+
+  <% if @drivers.any?() %>
+    <h3>Routes</h3>
+    <ul>
+      <% @drivers.each() do |driver| %>
+        <li><a href="passenger_signin/<%= driver.id()%>">From:<%= driver.route_from()%>To:<%= driver.route_to()%></a></li>
+      <% end %>
+    </ul>
+  <% else %>
+  <h2>No Routes have been added yet!</h2>
+  <% end %> <br>
