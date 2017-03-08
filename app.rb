@@ -14,20 +14,8 @@ get('/FAQ') do
   erb(:FAQ)
 end
 
-get('/payment') do
-  erb(:payment)
-end
-
-get('/terms_and_conditions') do
-  erb(:terms_and_conditions)
-end
-
 get('/about') do
   erb(:about)
-end
-
-get("/driver_signin") do
-  erb(:driver_form)
 end
 
 get("/passenger_signin/:id")  do
@@ -38,6 +26,10 @@ end
 get ("/driver") do
   @driver
   erb(:driver)
+end
+
+get("/driver_signin") do
+  erb(:driver_form)
 end
 
 post("/driver")  do
@@ -80,4 +72,15 @@ end
 get("/routes") do
   @drivers = Driver.all()
   erb(:routes)
+
+get("/passenger_signin")  do
+  erb(:passenger_form)
+end
+
+get('/terms_and_conditions') do
+  erb(:terms_and_conditions)
+end
+
+get('/payment') do
+  erb(:payment)
 end
