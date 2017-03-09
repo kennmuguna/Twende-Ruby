@@ -25,6 +25,7 @@ get('/about') do
   erb(:about)
 end
 
+
 get('/terms_and_conditions') do
   erb(:terms_and_conditions)
 end
@@ -84,6 +85,11 @@ end
 get("/passenger_signin/:id")  do
   @driver = Driver.find(params.fetch("id").to_i())
   erb(:passenger_form)
+end
+
+get("/routes") do
+  @drivers = Driver.all()
+  erb(:routes)
 end
 
 get("/passenger_signin")  do
