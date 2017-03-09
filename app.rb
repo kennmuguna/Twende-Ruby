@@ -112,6 +112,5 @@ get("/passenger")  do
 end
 
 get("/passenger_login") do
-
   erb(:passenger_login)
 end
