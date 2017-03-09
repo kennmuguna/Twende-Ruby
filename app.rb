@@ -72,6 +72,7 @@ end
 get("/routes") do
   @drivers = Driver.all()
   erb(:routes)
+end
 
 get("/passenger_signin")  do
   erb(:passenger_form)
