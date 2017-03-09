@@ -6,12 +6,12 @@ require("./lib/passenger")
 require("./lib/driver")
 require("pg")
 
-enable :sessions
-helper do
-  def validate(name,email,password)
+# enable :sessions
+# helper do
+#   def validate(name,email,password)
     
-  end
-end
+#   end
+# end
 
 get('/') do
   erb(:index)
