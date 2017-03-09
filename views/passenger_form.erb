@@ -1,8 +1,6 @@
 <center><h2>Passenger Sign-Up</h2></center>
 
-<select class="" name="">
 
-</select>
 <form action="/passenger" method="post">
   <input id="driver_id" name="driver_id" type="hidden" value="<%= @driver.id() %>">
 
@@ -11,6 +9,9 @@
 
   <label for="email">Your Email:</label>
   <input id="email" name="email" type="text"><br/>
+
+  <label for="password">Your Password:</label>
+  <input id="password" name="password" type="text"><br/>
 
   <label for="phone_number">Your Phone No:</label>
   <input id="phone_number" name="phone_number" type="number"><br/>
