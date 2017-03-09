@@ -18,8 +18,10 @@ ActiveRecord::Schema.define(version: 20170307131147) do
   create_table "drivers", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
+    t.string   "password"
     t.integer  "phone_number"
     t.string   "car"
+    t.string   "image"
     t.string   "number_plate"
     t.integer  "space"
     t.string   "route_from"
@@ -30,6 +32,7 @@ ActiveRecord::Schema.define(version: 20170307131147) do
   create_table "passengers", force: :cascade do |t|
     t.string  "name"
     t.string  "email"
+    t.string  "password"
     t.integer "phone_number"
     t.integer "driver_id"
   end

@@ -5,19 +5,13 @@
 <p>Here is a summary of the route and schedule you use as defined during sign-up:</p>
 
 You drive from <%= @driver.route_from()%> to <%= @driver.route_to()%> at <%= @driver.time()%>
-
+<div class="thumbnail">
+  <img src=<%= @driver.image()%> title=<%= @driver.car()%>>
+</div>
 
 <p>Contact details of passengers who share the same route and departure time as you will appear above
 as an expression of interest to car pool with you</p>
 
 <p>You're encouraged to reach out to see if you'd be comfortable car-pooling with them<p>
 
-<% if @drivers.any?() %>
-  <ul>
-    <% @drivers.each() do |driver| %>
-      <li><a href="/index"><%= driver.name()%></a></li>
-    <% end %>
-  </ul>
-<% else %>
-	<h2>Currently no drivers</h2>
-<% end %>
+<a href="/driver_login"><button type="button" class="btn btn-primary btn-lg text-center">Your Account</button></a>
