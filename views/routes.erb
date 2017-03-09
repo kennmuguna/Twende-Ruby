@@ -1,10 +1,18 @@
-<h1>Routes in Use</h1>
+<div class="container">
 
-<h2>Here is a list of the currently used routes by our drivers:</h2>
+<h2>Routes in Use</h2> <hr> <br>
 
-#Construction of a table that shows routes that have already been added onto database by drivers
+<h4>Here is a list of the routes in use by our currently registered car owners:</h4> <br>
 
 
-<h2>Here's a list of routes that are in demand</h2>
+  <% if @drivers.any?() %>
+    <ul>
+      <% @drivers.each() do |driver| %>
+        <li><a href="passenger_signin/<%= driver.id()%>">From:<%= driver.route_from()%>To:<%= driver.route_to()%></a></li> <br>
+      <% end %>
+    </ul>
+  <% else %>
+  <h2>No Routes have been added yet!</h2>
+  <% end %> <br>
 
-#Construction of a table showing routes that passengers have saved but have no drivers
+  </div>

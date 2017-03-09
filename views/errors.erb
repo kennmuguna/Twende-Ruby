@@ -1,0 +1,11 @@
+<h3>Oops there were some errors:</h3>
+
+<hr>
+
+  <ul>
+    <% @passenger.errors().full_messages().each() do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+
+  <h5><a href="/" >Return to sign-up page to try again</a></h5> <br>
