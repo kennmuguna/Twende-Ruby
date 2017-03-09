@@ -1,5 +1,60 @@
 body {
     padding-top: 60px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.hr {
+    height: 10px;
+}
+
+/* index images */
+
+.first-image {
+    float: left;        
+    width: 50%;
+    background-image: url("/images/first-image.jpg");
+    padding: 50px;
+    background-size: cover;
+    margin: 30px;       
+}
+
+h3 span {
+   color: white; 
+   font: bold 24px/45px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0);
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+   position: relative;
+   
+}
+
+.second-image {
+    float: right;
+    width: 50%;
+    background-image: url("/images/second-image.jpg");
+    padding: 50px;
+    background-size: cover;
+    margin: 30px;
+}
+
+.third-image {
+    float: left;
+    width: 50%;
+    background-image: url("/images/third-image.jpg");
+    padding: 50px;
+    background-size: cover;
+    margin: 30px;
+}
+
+/* index text */
+
+.first-block {
+    float: right;
+}
+
+h3 span.spacer {
+   padding:0 3px;
 }
 
 /* navbar */
@@ -83,8 +138,6 @@ body {
 #FAQ li,
 #about li {
     font-weight: bold;
-    font-size: 20px;
-    list-style: upper-roman;
 }
 
 #op input {
