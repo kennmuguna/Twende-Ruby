@@ -700,3 +700,9 @@ body {
 .toppad
 {margin-top:20px;
 }
+
+/*routes,driverlogin,passengerlogin*/
+.removedecorations{
+	list-style-type: none;
+	text-decoration: none;
+}
