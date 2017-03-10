@@ -6,6 +6,7 @@ require("./lib/passenger")
 require("./lib/driver")
 require("pg")
 
+
 # enable :sessions
 # helper do
 #   def validate(name,email,password)
@@ -66,7 +67,7 @@ end
 
 get("/driver/:id") do
   @driver = Driver.find(params.fetch("id").to_i())
-  erb(:"/users/driver_home")
+  erb(:driver_home)
 end
 
 
@@ -77,7 +78,7 @@ end
 
 get("/driver_login/:id") do
   @driver = Driver.find(params.fetch("id").to_i())
-  erb(:"/users/driver_home")
+  erb(:driver_home)
 end
 
 # display routes
@@ -120,7 +121,7 @@ end
 
 get("/passenger/:id") do
   @passenger = Passenger.find(params.fetch("id").to_i())
-  erb(:"/users/passenger_home")
+  erb(:passenger_home)
 end
 
 get("/passenger_login") do
@@ -131,5 +132,5 @@ end
 
 get("/passenger_login/:id") do
   @passenger = Passenger.find(params.fetch("id").to_i())
-  erb(:"/users/passenger_home")
+  erb(:passenger_home)
 end

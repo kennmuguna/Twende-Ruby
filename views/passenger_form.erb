@@ -24,19 +24,21 @@
 
       <!-- You only need this form and the form-register.css -->
 
-        <form class="form-register" method="post" action="#">
+        <form class="form-register" method="post" action="/passenger">
 
             <div class="form-register-with-email">
 
                 <div class="form-white-background">
 
                     <div class="form-title-row">
-                        <h1>Log in to your account</h1>
+                        <h1>Create your account</h1>
                     </div>
+
+                      <input id="driver_id" name="driver_id" type="hidden" value="<%= @driver.id() %>">
 
                     <div class="form-row">
                         <label>
-                            <span>Username</span>
+                            <span>Name</span>
                             <input type="text" name="name">
                         </label>
                     </div>
@@ -58,7 +60,7 @@
                     <div class="form-row">
                         <label>
                             <span>Phone number</span>
-                            <input type="number" name="password">
+                            <input type="number" name="phone_number">
                         </label>
                     </div>
 
