@@ -1,15 +1,19 @@
-<h1>Routes in Use</h1>
+<div class="container">
 
-<h2>Here is a list of the routes in use by our currently registered car owners:</h2>
+<h2>Routes in Use</h2> <hr> <br>
+
+<h4>Choose a Route to Sign Up for:</h4> <br>
+
 
 
   <% if @drivers.any?() %>
-    <h3>Routes</h3>
-    <ul>
+    <ul class="removedecorations">
       <% @drivers.each() do |driver| %>
-        <li><a href="passenger_signin/<%= driver.id()%>">From:<%= driver.route_from()%>To:<%= driver.route_to()%></a></li>
+        <a href="passenger_signin/<%= driver.id()%>"><button type="button" class="btn btn-secondary btn-lg btn-block"><li>From: <%= driver.route_from()%> To: <%= driver.route_to()%></li> <br></button></a><br/>
       <% end %>
     </ul>
   <% else %>
   <h2>No Routes have been added yet!</h2>
   <% end %> <br>
+
+  </div>

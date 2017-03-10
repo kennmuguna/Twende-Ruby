@@ -1,20 +1,84 @@
-<center><h2>Passenger Sign-Up</h2></center>
 
-<select class="" name="">
 
-</select>
-<form action="/passenger" method="post">
-  <input id="driver_id" name="driver_id" type="hidden" value="<%= @driver.id() %>">
+<!DOCTYPE html>
+<html>
 
-  <label for="name">Your First/Last Name:</label>
-  <input id="name" name="name" type="text"><br/>
+<head>
 
-  <label for="email">Your Email:</label>
-  <input id="email" name="email" type="text"><br/>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <label for="phone_number">Your Phone No:</label>
-  <input id="phone_number" name="phone_number" type="number"><br/>
+	<title>Passenger Sign-up</title>
 
-  <button type="submit" class="btn btn-success">Sign In</button></form>
+	<link rel="stylesheet" href="assets/demo.css">
+	<link rel="stylesheet" href="assets/form-register.css">
 
-</form> <br>
+</head>
+
+    <div class="main-content">
+
+    <div class="container"> <br>
+
+    <h2>Passengers Sign-Up</h2>
+
+      <!-- You only need this form and the form-register.css -->
+
+        <form class="form-register" method="post" action="/passenger">
+
+            <div class="form-register-with-email">
+
+                <div class="form-white-background">
+
+                    <div class="form-title-row">
+                        <h1>Create your account</h1>
+                    </div>
+
+                      <input id="driver_id" name="driver_id" type="hidden" value="<%= @driver.id() %>">
+
+                    <div class="form-row">
+                        <label>
+                            <span>Name</span>
+                            <input type="text" name="name">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Email</span>
+                            <input type="text" name="email">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Password</span>
+                            <input type="text" name="password">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Phone number</span>
+                            <input type="number" name="phone_number">
+                        </label>
+                    </div>
+
+                   <div class="form-row">
+                        <button type="submit">Submit</button>
+                    </div>
+
+                </div>
+
+                
+            </div>
+
+        </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

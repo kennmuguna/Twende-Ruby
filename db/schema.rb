@@ -16,20 +16,23 @@ ActiveRecord::Schema.define(version: 20170307131147) do
   enable_extension "plpgsql"
 
   create_table "drivers", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.integer  "phone_number"
-    t.string   "car"
-    t.string   "number_plate"
-    t.integer  "space"
-    t.string   "route_from"
-    t.string   "route_to"
-    t.datetime "time"
+    t.string  "name"
+    t.string  "email"
+    t.string  "password"
+    t.integer "phone_number"
+    t.string  "car"
+    t.string  "image"
+    t.string  "number_plate"
+    t.integer "space"
+    t.string  "route_from"
+    t.string  "route_to"
+    t.integer "time"
   end
 
   create_table "passengers", force: :cascade do |t|
     t.string  "name"
     t.string  "email"
+    t.string  "password"
     t.integer "phone_number"
     t.integer "driver_id"
   end

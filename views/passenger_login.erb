@@ -1,0 +1,13 @@
+
+
+<div class="container">
+
+<h1><center>Passengers Currently Signed Up</center></h1>
+
+<ul class="removedecorations">
+  <% @passengers.each() do |passenger|%>
+    <a href="/passenger_login/<%= passenger.id()%>"><button type="button" class="btn btn-secondary btn-lg btn-block"><li><%= passenger.name()%></li></button></a><br/>
+  <% end %>
+</ul>
+
+</div>

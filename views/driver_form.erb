@@ -1,32 +1,116 @@
-<center><h2>Driver Sign-Up</h2></center>
+    <div class="main-content">
 
-<form action="/driver" method="post">
+    <div class="container"> <br>
 
-  <label for="name">Your First Name:</label>
-  <input id="name" name="name" type="text"> <br/>
+    <h2>Car Owners: Fill in your details below</h2>
 
-  <label for="email">Your Email:</label>
-  <input id="email" name="email" type="text"> <br/>
+      <!-- You only need this form and the form-register.css -->
 
-  <label for="phone_number">Your Phone No:</label>
-  <input id="phone_number" name="phone_number" type="number"><br/>
+        <form class="form-register" method="post" action="driver">
 
-  <label for="car">Your Car Make and Model:</label>
-  <input id="car" name="car" type="text"><br/>
+            <div class="form-register-with-email">
 
-  <label for="number_plate">Vehicle's number_plate:</label>
-  <input id="number_plate" name="number_plate" type="text"><br/>
+                <div class="form-white-background">
 
-  <label for="space">Available seats:</label>
-  <input id="space" name="space" type="number"><br/>
+                    <div class="form-title-row">
+                        <h1>Create a Car Owner's account</h1>
+                    </div>
 
-  <label for="route_from">Your route: From:</label>
-  <input id="route_from" name="route_from" type="text"><br/>
+                    <div class="form-row">
+                        <label>
+                            <span>Name</span>
+                            <input type="text" name="name">
+                        </label>
+                    </div>
 
-  <label for="route_to">Your route: To:</label>
-  <input id="route_to" name="route_to" type="text"><br/>
+                    <div class="form-row">
+                        <label>
+                            <span>Email</span>
+                            <input type="text" name="email">
+                        </label>
+                    </div>
 
-  <label for="time">Your time:</label>
-  <input id="time" name="time" type="text"><br/>
+                    <div class="form-row">
+                        <label>
+                            <span>Password</span>
+                            <input type="text" name="password">
+                        </label>
+                    </div>
 
-<button type="submit" class="btn btn-success">Sign In</button></form>
+                    <div class="form-row">
+                        <label>
+                            <span>Phone Number</span>
+                            <input type="number" name="phone_number">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Make/Model</span>
+                            <input type="text" name="car">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Car's image</span>
+                            <input type="text" name="image">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Registration plate</span>
+                            <input type="text" name="number_plate">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Available seats</span>
+                            <input type="number" name="space">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Your route From:</span>
+                            <input type="text" name="route_from">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>To:</span>
+                            <input type="text" name="route_to">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Departure time</span>
+                            <input type="number" name="time">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label class="form-checkbox">
+                            <input type="checkbox" name="checkbox" checked>
+                            <span>I agree to the <a href="#">terms and conditions</a></span>
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <button type="submit">Submit</button>
+                    </div>
+
+                </div>
+
+                
+            </div>
+
+        </form>
+
+        </div>
+
+    </div>
