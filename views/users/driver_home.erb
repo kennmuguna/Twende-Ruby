@@ -1,1 +1,14 @@
 <h1>welcome <%= @driver.name()%></h1>
+
+<% if @driver.passengers().any?() %>
+    <h3>Here are all your passengers:</h3>
+
+    <ul>
+      <% @driver.passengers().each() do |passenger| %>
+        <li><%= passenger.name() %> </li>
+      <% end %>
+    </ul>
+
+    <% else %>
+      <p>Do Not have passengers yet!</p>
+    <% end %>

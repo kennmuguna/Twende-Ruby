@@ -6,12 +6,12 @@ require("./lib/passenger")
 require("./lib/driver")
 require("pg")
 
-enable :sessions
-helper do
-  def validate(name,email,password)
-    
-  end
-end
+# enable :sessions
+# helper do
+#   def validate(name,email,password)
+#
+#   end
+# end
 
 get('/') do
   erb(:index)
@@ -64,15 +64,20 @@ get ("/driver") do
   erb(:driver)
 end
 
-get("/driver_login") do
-  name = params.fetch("name").capitalize!()
-  email = params.fetch("email")
-  password = params.fetch("password")
-  @driver = Driver.find(name)
-  @driver = Driver.find(email)
-  @driver = Driver.find(password)
+get("/driver/:id") do
   @driver = Driver.find(params.fetch("id").to_i())
-  erb(:"users/driver_home")
+  erb(:"/users/driver_home")
+end
+
+
+get("/driver_login") do
+  @drivers = Driver.all()
+  erb(:driver_login)
+end
+
+get("/driver_login/:id") do
+  @driver = Driver.find(params.fetch("id").to_i())
+  erb(:"/users/driver_home")
 end
 
 # display routes
@@ -82,17 +87,13 @@ get("/routes") do
 end
 
 # passenger backend
-get("/passenger_signin/:id")  do
-  @driver = Driver.find(params.fetch("id").to_i())
-  erb(:passenger_form)
-end
-
 get("/routes") do
   @drivers = Driver.all()
   erb(:routes)
 end
 
-get("/passenger_signin")  do
+get("/passenger_signin/:id")  do
+  @driver = Driver.find(params.fetch("id").to_i())
   erb(:passenger_form)
 end
 
@@ -117,6 +118,17 @@ get("/passenger")  do
   erb(:passenger)
 end
 
+get("/passenger/:id") do
+  @passenger = Passenger.find(params.fetch("id").to_i())
+  erb(:"/users/passenger_home")
+end
+
 get("/passenger_login") do
+  @passengers = Passenger.all()
   erb(:passenger_login)
+end
+
+get("/passenger_login/:id") do
+  @passenger = Passenger.find(params.fetch("id").to_i())
+  erb(:"/users/passenger_home")
 end
