@@ -120,3 +120,7 @@ end
 get("/passenger_login") do
   erb(:passenger_login)
 end
+
+get("/users/driver_home") do
+  erb(:"/users/driver_home")
+end
