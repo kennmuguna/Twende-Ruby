@@ -13,3 +13,9 @@ log in
   <button type="submit" class="btn btn-success">Log In</button></form>
 
 </form>
+
+<ul>
+  <% @passengers.each() do |passenger|%>
+    <li><a href="/passenger_login/<%= passenger.id()%>"><%= passenger.name()%></a></li>
+  <% end %>
+</ul>

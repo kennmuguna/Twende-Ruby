@@ -12,3 +12,12 @@
   <button type="submit" class="btn btn-success">Log In</button></form>
 
 </form>
+
+<label for="driver_id">Driver</label>
+
+
+<ul>
+  <% @drivers.each() do |driver|%>
+    <li><a href="/driver_login/<%= driver.id()%>"><%= driver.name()%></a></li>
+  <% end %>
+</ul>
