@@ -1,175 +1,82 @@
-<%#<center><h2>Driver Sign-Up</h2></center>
 
-<form action="/driver" method="post">
+	<div class="container-fluid">
+	    <section class="container">
+			<div class="container-page">
+				<div class="col-md-6">
+				<h3 class="dark-grey">Registration</h3>
+				<form class="" action="/driver" method="post">
 
-  <label for="name">Your First Name:</label>
-  <input id="name" name="name" type="text"> <br/>
+					<div class="form-group col-lg-12">
+						<label>Your First/Last Name:</label>
+						<input type="text" name="name" class="form-control" id="name">
+					</div>
 
-  <label for="email">Your Email:</label>
-  <input id="email" name="email" type="text"> <br/>
+					<div class="form-group col-lg-6">
+						<label>Email:</label>
+						<input type="text" name="email" class="form-control" id="email">
+					</div>
 
-  <label for="password">Your Password:</label>
-  <input id="password" name="password" type="text"><br/>
+					<div class="form-group col-lg-6">
+						<label>Password</label>
+						<input type="text" name="password" class="form-control" id="password">
+					</div>
 
-  <label for="phone_number">Your Phone No:</label>
-  <input id="phone_number" name="phone_number" type="number"><br/>
+					<div class="form-group col-lg-6">
+						<label>phone_number</label>
+						<input type="number" name="phone_number" class="form-control" id="phone_number">
+					</div>
 
-  <label for="car">Your Car Make and Model:</label>
-  <input id="car" name="car" type="text"><br/>
+					<div class="form-group col-lg-6">
+						<label>Car Model</label>
+						<input type="text" name="car" class="form-control" id="car">
+					</div>
 
-  <label for="image">Your Car Image:</label>
-  <input id="image" name="image" type="text"><br/>
+					<div class="form-group col-lg-6">
+						<label>Car Image</label>
+						<input type="text" name="image" class="form-control" id="image">
+					</div>
 
-  <label for="number_plate">Vehicle's number_plate:</label>
-  <input id="number_plate" name="number_plate" type="text"><br/>
+					<div class="form-group col-lg-6">
+						<label>Registration Plate:</label>
+						<input type="text" name="number_plate" class="form-control" id="number_plate">
+					</div>
 
-  <label for="space">Available seats:</label>
-  <input id="space" name="space" type="number"><br/>
+					<div class="form-group col-lg-6">
+						<label>Available seats:</label>
+						<input type="number" name="space" class="form-control" id="space">
+					</div>
 
-  <label for="route_from">Your route: From:</label>
-  <input id="route_from" name="route_from" type="text"><br/>
+					<div class="form-group col-lg-6">
+						<label>Route From:</label>
+						<input type="text" name="route_from" class="form-control" id="route_from">
+					</div>
 
-  <label for="route_to">Your route: To:</label>
-  <input id="route_to" name="route_to" type="text"><br/>
+					<div class="form-group col-lg-6">
+						<label>Route To:</label>
+						<input type="text" name="route_to" class="form-control" id="route_to">
+					</div>
 
-  <label for="time">Your time:</label>
-  <input id="time" name="time" type="text"><br/>
+					<div class="form-group col-lg-6">
+						<label>Time:</label>
+						<input type="number" name="time" class="form-control" id="time">
+					</div>
 
-<button type="submit" class="btn btn-success">Sign In</button></form>%>
+					<div class="">
+						<button type="submit" class="btn btn-primary">Register</button>
+					</div>
+					<div class="col-sm-6">
+						<input type="checkbox" class="checkbox" /><span>I agree to the <a href="#">terms and conditions</a></span>
+					</div>
+				</form>
 
-<!DOCTYPE html>
-<html>
 
-<head>
+				</div>
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Registration Form</title>
+				<div class="col-md-6">
+					
 
-	<link rel="stylesheet" href="assets/demo.css">
-	<link rel="stylesheet" href="assets/form-register.css">
-
-</head>
-
-    <div class="main-content">
-
-    <div class="container"> <br>
-
-    <h2>Car Owners: Fill in your details below</h2>
-
-      <!-- You only need this form and the form-register.css -->
-
-        <form class="form-register" method="post" action="#">
-
-            <div class="form-register-with-email">
-
-                <div class="form-white-background">
-
-                    <div class="form-title-row">
-                        <h1>Create a Car Owner's account</h1>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>Name</span>
-                            <input type="text" name="name">
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>Email</span>
-                            <input type="text" name="email">
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>Password</span>
-                            <input type="text" name="password">
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>Phone Number</span>
-                            <input type="number" name="phone_number">
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>Make/Model</span>
-                            <input type="text" name="car">
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>Car's image</span>
-                            <input type="text" name="image">
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>Registration plate</span>
-                            <input type="text" name="number_plate">
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>Available seats</span>
-                            <input type="number" name="space">
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>Your route From:</span>
-                            <input type="text" name="route_from">
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>To:</span>
-                            <input type="text" name="route_to">
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>Departure time</span>
-                            <input type="number" name="time">
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <label class="form-checkbox">
-                            <input type="checkbox" name="checkbox" checked>
-                            <span>I agree to the <a href="#">terms and conditions</a></span>
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <button type="submit">Submit</button>
-                    </div>
-
-                </div>
-
-                
-            </div>
-
-        </form>
-
-        </div>
-
-    </div>
-
-</body>
-
-</html>
+				</div>
+			</div>
+		</section>
+	</div>
