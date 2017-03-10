@@ -1,23 +1,74 @@
-<form action="/users/driver_home" method="post">
+<!DOCTYPE html>
+<html>
 
-  <label for="name">UserName:</label>
-  <input id="name" name="name" type="text"> <br/>
+<head>
 
-  <label for="email">Your Email:</label>
-  <input id="email" name="email" type="text"> <br/>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <label for="password">Your Password:</label>
-  <input id="password" name="password" type="text"><br/>
+	<title>Registration Form</title>
 
-  <button type="submit" class="btn btn-success">Log In</button></form>
+	<link rel="stylesheet" href="assets/demo.css">
+	<link rel="stylesheet" href="assets/form-register.css">
 
-</form>
+</head>
 
-<label for="driver_id">Driver</label>
+    <div class="main-content">
 
+    <div class="container"> <br>
 
-<ul>
-  <% @drivers.each() do |driver|%>
-    <li><a href="/driver_login/<%= driver.id()%>"><%= driver.name()%></a></li>
-  <% end %>
-</ul>
+    <h2>Car Owners: Login</h2>
+
+      <!-- You only need this form and the form-register.css -->
+
+        <form class="form-register" method="post" action="#">
+
+            <div class="form-register-with-email">
+
+                <div class="form-white-background">
+
+                    <div class="form-title-row">
+                        <h1>Log in to your account</h1>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Username</span>
+                            <input type="text" name="name">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Email</span>
+                            <input type="text" name="email">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Password</span>
+                            <input type="text" name="password">
+                        </label>
+                    </div>
+
+                   <div class="form-row">
+                        <button type="submit">Log in</button>
+                    </div>
+
+                </div>
+
+                
+            </div>
+
+        </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
