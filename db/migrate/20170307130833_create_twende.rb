@@ -11,7 +11,7 @@ class CreateTwende < ActiveRecord::Migration[5.0]
       d.column(:space, :int)
       d.column(:route_from, :string)
       d.column(:route_to, :string)
-      d.column(:time, :datetime)
+      d.column(:time, :integer)
     end
   end
 end
