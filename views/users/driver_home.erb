@@ -9,8 +9,8 @@
 
       </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
-   
-   
+
+
           <div class="panel panel-info">
             <div class="panel-heading">
               <h3 class="panel-title"><%  @driver.name() %></h3>
@@ -18,7 +18,7 @@
             <div class="panel-body">
               <div class="row">
                 <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> </div>
-                
+
                 <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
                   <dl>
                     <dt>DEPARTMENT:</dt>
@@ -31,7 +31,7 @@
                     <dd>Male</dd>
                   </dl>
                 </div>-->
-                <div class=" col-md-9 col-lg-9 "> 
+                <div class=" col-md-9 col-lg-9 ">
                   <table class="table table-user-information">
                     <tbody>
                       <tr>
@@ -40,48 +40,48 @@
                       </tr>
                       <tr>
                         <td>Phone Number</td>
-                        <td><%= @driver.phone_number() %></td>
+                        <td>+254<%= @driver.phone_number() %></td>
                       </tr>
                       <tr>
                         <td>Make or model</td>
-                        <td><%= driver.car() %></td>
+                        <td><%= @driver.car() %></td>
                       </tr>
-                   
+
                          <tr>
                              <tr>
                         <td>Registration Plate</td>
-                        <td><%= driver.number_plate() %></td>
+                        <td><%= @driver.number_plate() %></td>
                       </tr>
                         <tr>
                         <td>Available Seats</td>
-                        <td><%= driver.space() %></td>
+                        <td><%= @driver.space() %></td>
                       </tr>
                       <tr>
                         <td>Your Route: From:</td>
-                        <td><%= driver.route_from() %></td>
+                        <td><%= @driver.route_from() %></td>
                       </tr>
-                        <td>To:r</td>
-                        <td><%= driver.route_to() %></td>
-                           
+                        <td>To:Route</td>
+                        <td><%= @driver.route_to() %></td>
+
                       </tr>
                       <tr>
-                        <td><%= if @driver.passengers().any?() %></td>
-                        <h2>Here are all your passengers</h2>
+                        <td><% if @driver.passengers().any?() %></td>
+                          <h2>Here are all your passengers</h2>
 
-                        <ul>
-                            <% @driver.passengers().each() do |passenger| %>
-                            <li><%= passenger.name() %> </li>
-                            <% end %>
-                        </ul>
-                        
+                          <ul>
+                              <% @driver.passengers().each() do |passenger| %>
+                              <li><%= passenger.name() %> </li>
+                              <% end %>
+                          </ul>
+
                         <% else %>
-                        <p>Do Not have passengers yet!</p>
+                          <p>Do Not have passengers yet!</p>
                         <% end %>
+                      </tr>
 
-                     
                     </tbody>
                   </table>
-                  
+
                   <a href="#" class="btn btn-primary">My Sales Performance</a>
                   <a href="#" class="btn btn-primary">Team Sales Performance</a>
                 </div>
@@ -94,7 +94,7 @@
                             <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
                         </span>
                     </div>
-            
+
           </div>
         </div>
       </div>

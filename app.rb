@@ -50,7 +50,7 @@ post("/driver")  do
   space = params.fetch("space").to_i()
   route_from = params.fetch("route_from")
   route_to = params.fetch("route_to")
-  time = params.fetch("time")
+  time = params.fetch("time").to_i()
   @driver = Driver.new({:name => name, :email => email, :password => password, :phone_number => phone_number, :car => car, :image => image, :number_plate => number_plate, :space => space, :route_from => route_from, :route_to => route_to, :time => time, :id => nil})
   if @driver.save()
     erb(:driver)
