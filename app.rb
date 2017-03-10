@@ -9,7 +9,7 @@ require("pg")
 # enable :sessions
 # helper do
 #   def validate(name,email,password)
-#
+
 #   end
 # end
 
@@ -127,6 +127,7 @@ get("/passenger_login") do
   @passengers = Passenger.all()
   erb(:passenger_login)
 end
+
 
 get("/passenger_login/:id") do
   @passenger = Passenger.find(params.fetch("id").to_i())
