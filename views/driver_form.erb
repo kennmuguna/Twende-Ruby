@@ -1,4 +1,4 @@
-<center><h2>Driver Sign-Up</h2></center>
+<%#<center><h2>Driver Sign-Up</h2></center>
 
 <form action="/driver" method="post">
 
@@ -35,4 +35,141 @@
   <label for="time">Your time:</label>
   <input id="time" name="time" type="text"><br/>
 
-<button type="submit" class="btn btn-success">Sign In</button></form>
+<button type="submit" class="btn btn-success">Sign In</button></form>%>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Registration Form</title>
+
+	<link rel="stylesheet" href="assets/demo.css">
+	<link rel="stylesheet" href="assets/form-register.css">
+
+</head>
+
+    <div class="main-content">
+
+    <div class="container"> <br>
+
+    <h2>Car Owners: Fill in your details below</h2>
+
+      <!-- You only need this form and the form-register.css -->
+
+        <form class="form-register" method="post" action="#">
+
+            <div class="form-register-with-email">
+
+                <div class="form-white-background">
+
+                    <div class="form-title-row">
+                        <h1>Create a Car Owner's account</h1>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Name</span>
+                            <input type="text" name="name">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Email</span>
+                            <input type="text" name="email">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Password</span>
+                            <input type="text" name="password">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Phone Number</span>
+                            <input type="number" name="phone_number">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Make/Model</span>
+                            <input type="text" name="car">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Car's image</span>
+                            <input type="text" name="image">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Registration plate</span>
+                            <input type="text" name="number_plate">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Available seats</span>
+                            <input type="number" name="space">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Your route From:</span>
+                            <input type="text" name="route_from">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>To:</span>
+                            <input type="text" name="route_to">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Departure time</span>
+                            <input type="number" name="time">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label class="form-checkbox">
+                            <input type="checkbox" name="checkbox" checked>
+                            <span>I agree to the <a href="#">terms and conditions</a></span>
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <button type="submit">Submit</button>
+                    </div>
+
+                </div>
+
+                
+            </div>
+
+        </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
