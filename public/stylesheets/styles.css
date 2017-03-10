@@ -3,71 +3,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.hr {
-    height: 10px;
-}
-
-/* index images */
-
-.first-image {
-    float: left;        
-    width: 90%;
-    background-image: url("/images/first-image.jpg");
-    padding: 50px;
-    background-size: cover;
-    margin: 30px;       
-}
-#myclear{
-    clear: both;
-}
-
-h3 span {
-   color: white; 
-   font: bold 24px/45px Helvetica, Sans-Serif; 
-   letter-spacing: -1px;  
-   background: rgb(0, 0, 0);
-   background: rgba(0, 0, 0, 0.7);
-   padding: 10px; 
-   position: relative;
-   
-}
-
-.second-image {
-    float: right;
-    width: 50%;
-    background-image: url("/images/second-image.jpg");
-    padding: 50px;
-    background-size: cover;
-    margin: 30px;
-}
-
-.third-image {
-    float: left;
-    width: 50%;
-    background-image: url("/images/third-image.jpg");
-    padding: 50px;
-    background-size: cover;
-    margin: 30px;
-}
-
-/* index text */
-
-.first-block {
-    float: right;
-}
-
-.second-block {
-    float: left;
-}
-
-.third-block {
-    float:right;
-}
-h3 span.spacer {
-   padding:0 3px;
-}
-
-/* navbar */
+/* NAVBAR STYLING */
 
 .navbar-default {
     background-color: white;
@@ -113,6 +49,18 @@ h3 span.spacer {
     background-color: #D5D5D5;
 }
 
+#op {
+    display: none;
+}
+
+.glyphicon-menu-hamburger {
+	color: #800020;
+}
+
+/*END*/
+
+/*HEADER STYLING*/
+
 #header {
     background: linear-gradient(rgba(128, 0, 32, 0.5), rgba(128, 0, 32, 0.5)), url("/images/thaddaeus-lim-400183.jpg");
 	background-size: cover;
@@ -136,10 +84,57 @@ h3 span.spacer {
 	color: white;
 }
 
-.glyphicon-menu-down {
-	font-size: 20px;
-	font-weight: bolder;
+/*END*/
+
+/*INDEX PAGE STYLING*/
+
+.first-image{
+	background-image: url("/images/first-image.jpg");
 }
+
+.second-image{
+	background-image: url("/images/second-image.jpg");
+}
+
+.third-image{
+	background-image: url("/images/third-image.jpg");
+}
+
+.first-image, 
+.second-image,
+.third-image {
+	margin-top: 50px;
+	margin-bottom: 30px;
+	width: 550px;
+	height: 250px;
+	background-size: cover;
+}
+
+.first-image h3, 
+.second-image h3,
+.third-image h3 {
+	background-color: rgba(0, 0, 0, 0.8);
+	position: absolute;
+	z-index: 1;
+	padding: 10px;
+	top: 75px;
+	left: 100px;
+	color: white;
+	text-align: center;
+}
+
+.first-block,
+.second-block,
+.third-block {
+	margin-top: 100px;
+}
+
+.second-block {
+	text-align: right;
+}
+
+
+/*END*/
 
 #FAQ {
     font-size: 15px;
@@ -150,9 +145,6 @@ h3 span.spacer {
     font-weight: bold;
 }
 
-#op input {
-    display: none;
-}
 
 .lower {
     margin-left: 15px;
